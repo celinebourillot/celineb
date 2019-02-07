@@ -1,5 +1,5 @@
 {
-    "version": 2,
+    "version": 1,
     "name": "celineb",
     "builds": [
         { "src": "next.config.js", "use": "@now/next" }
