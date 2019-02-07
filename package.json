@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "next build",
-        "start": "node server.js",
-
+        "start": "node server.js"
     },
     "keywords": [],
     "author": "",
