@@ -1,0 +1,25 @@
+body {
+  font-family: $text-font;
+  font-size: $small-text;
+}
+
+h1 {
+  font-family: $title-font;
+  font-size: $large-text;
+}
+
+h3 {
+  font-family: $title-font;
+  font-size: $medium-text;
+  color: $primary;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  line-height: 55px;
+}
+
+h4 {
+  color: $primary;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

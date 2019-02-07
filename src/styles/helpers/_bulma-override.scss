@@ -1,0 +1,45 @@
+//COLOURS
+.is-primary {
+  background: $primary;
+  color: $theme-light;
+}
+
+.is-secondary {
+  background: $theme-light;
+  color: $primary;
+}
+
+//TYPOGRAPHY
+.small-text {
+  font-size: $small-text;
+}
+
+//OVERLAY
+
+.is-overlay--light {
+  background: rgba(252,233,231,0.5);
+}
+
+.is-overlay--dark {
+  background: rgba(25,58,105,0.8);
+}
+
+//POSITION
+.is-relative {
+  position: relative;
+}
+
+//RESPONSIVE YOUTUBE Video
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
