@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "nextjs",
+    "name": "celineb",
     "builds": [
         { "src": "next.config.js", "use": "@now/next" }
     ]

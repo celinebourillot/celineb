@@ -23,7 +23,7 @@
         "express": "^4.16.3",
         "isomorphic-unfetch": "^2.0.0",
         "moment": "^2.24.0",
-        "next": "latest",
+        "next": "^8.0.0-canary.18",
         "react": "^16.0.0",
         "react-moment": "^0.8.4",
         "react-slick": "^0.23.2"
