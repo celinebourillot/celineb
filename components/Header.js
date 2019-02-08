@@ -15,6 +15,7 @@ class Header extends Component {
             <div>
                 <Head>
                     <link href="https://fonts.googleapis.com/css?family=Bangers|Carter+One|Muli:400,800" rel="stylesheet"/>
+                    <style src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"/>
                     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
                     <meta
                         name="viewport"
