@@ -4,16 +4,19 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "next",
-        "build": "next build",
-        "start": "next start",
-        "heroku-postbuild": "next build && next start"
+      "dev": "node server.js",
+      "build": "next build",
+      "start": "NODE_ENV=production node server.js",
+      "heroku-postbuild": "next build && NODE_ENV=production node server.js",
+      "export": "next export",
+      "start-live": "next start -p 80"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bulma": "^0.7.4",
+        "compression": "^1.7.3",
         "express": "^4.16.2",
         "heroku-cli": "^7.0.9",
         "isomorphic-unfetch": "^2.0.0",
