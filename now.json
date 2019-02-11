@@ -1,8 +1,0 @@
-{
-    "alias":["celineb.me"],
-    "version": 2,
-    "name": "celineb",
-    "builds": [
-        { "src": "next.config.js", "use": "@now/next" }
-    ]
-}
