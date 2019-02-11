@@ -1,50 +1,23 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_504143a917ee81c7e3cc.js"
+  ],
   "pages": {
-    "/blog": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
-    ],
-    "/category": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
-    ],
-    "/index": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
-    ],
-    "/post": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
-    ],
-    "/preview": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
-    ],
-    "/property": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
-    ],
     "/_app": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.f8392fb9846bca36c2e9.js",
-      "static/runtime/main-c9bd2f103fb8ad74b05c.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
