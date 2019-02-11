@@ -25,8 +25,7 @@ class Menu extends Component {
         const actualPage = item.object === "category" ? "category" : "post";
         return (
             <Link
-                as={`/${item.object}/${slug}`}
-                href={`/${actualPage}?slug=${slug}&apiRoute=${item.object}`}
+                href={`/${actualPage}?slug=${slug}&post_type=${item.object}`}
                 key={item.ID}
             >
                 <a className="navbar-item">{item.title}</a>
@@ -53,6 +52,11 @@ class Menu extends Component {
           <div className="navbar-start">
 
             {menuItems}
+
+            <Link href="/blog">
+
+                <a className="navbar-item">Blog</a>
+            </Link>
 
             { /*<div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">

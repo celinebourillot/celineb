@@ -26,8 +26,7 @@ class Blog extends Component {
 
               <div className="card">
               <Link
-                as={`/post/${post.slug}`}
-                href={`/post?slug=${post.slug}&apiRoute=post`}
+                href={`/post?slug=${post.slug}&post_type=post`}
               >
               <div>
                 {post.acf.banner_image &&

@@ -39,10 +39,9 @@ export default function ContentSlice(props) {
                         }
 
                       </div>
-                      <Link
-                          as={`/${column.post_type}/${column.post_name}`}
-                          href={`/post?slug=${column.post_name}&apiRoute=${column.post_type}`}
-                      >
+
+
+                      <Link href={`/post?slug=${column.post_name}&post_type=${column.post_type}`}>
                           <button className="button is-primary">Read more</button>
                       </Link>
                     </div>

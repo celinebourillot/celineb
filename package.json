@@ -4,21 +4,22 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "dev": "next",
         "build": "next build",
-        "start": "node server.js",
+        "start": "next start",
         "now-build": "next build"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "base-64": "^0.1.0",
-        "bulma": "^0.7.2",
-        "express": "^4.16.3",
+        "bulma": "^0.7.4",
+        "express": "^4.16.2",
         "isomorphic-unfetch": "^2.0.0",
         "moment": "^2.24.0",
-        "next": "^8.0.0-canary.18",
-        "react": "^16.0.0",
+        "next": "^8.0.0",
+        "next-routes": "^1.4.2",
+        "react": "^16.4.0",
         "react-moment": "^0.8.4",
         "react-slick": "^0.23.2"
     },
@@ -32,7 +33,7 @@
         "postcss-easy-import": "^3.0.0",
         "postcss-loader": "^2.0.7",
         "raw-loader": "^0.5.1",
-        "react-dom": "^16.2.0",
+        "react-dom": "^16.8.0",
         "sass-loader": "^6.0.6",
         "webpack": "^3.10.0"
     }

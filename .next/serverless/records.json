@@ -1,0 +1,31 @@
+{
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": {}
+  },
+  "chunks": {
+    "byName": {
+      "pages/_app.js": 0,
+      "pages/_document.js": 1,
+      "pages/_error.js": 2,
+      "pages/blog.js": 3,
+      "pages/category.js": 4,
+      "pages/index.js": 5,
+      "pages/post.js": 6,
+      "pages/preview.js": 7,
+      "pages/property.js": 8
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+}
