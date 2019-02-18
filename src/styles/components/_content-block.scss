@@ -1,0 +1,8 @@
+.content_block {
+
+  padding-top: $baseline*2;
+
+  &:last-of-type {
+    padding-bottom: $baseline*2;
+  }
+}

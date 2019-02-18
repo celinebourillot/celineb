@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Link from "next/link";
 import { Config } from "../config.js";
 
+import Button from './Button.js';
+
 class Menu extends Component {
   constructor() {
       super();
@@ -13,7 +15,7 @@ class Menu extends Component {
   }
 
   render() {
-      const menuItems = this.props.menu.items.map((item, index) => {
+       const menuItems = this.props.menu.items.map((item, index) => {
         if (item.object === "custom") {
             return (
                 <Link href={item.url} key={item.ID}>
@@ -49,47 +51,19 @@ class Menu extends Component {
         </div>
 
         <div id="navbarBasicExample" className="navbar-menu">
-          <div className="navbar-start">
-
-            {menuItems}
-
-            <Link href="/blog">
-
-                <a className="navbar-item">Blog</a>
-            </Link>
-
-            { /*<div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">
-                More
-              </a>
-
-              <div className="navbar-dropdown">
-                <a className="navbar-item">
-                  About
-                </a>
-                <a className="navbar-item">
-                  Jobs
-                </a>
-                <a className="navbar-item">
-                  Contact
-                </a>
-                <hr className="navbar-divider"/>
-                <a className="navbar-item">
-                  Report an issue
-                </a>
-              </div>
-            </div> */}
-          </div>
-
           <div className="navbar-end">
+            {menuItems}
+            {
+              this.props.cta && this.props.cta.button_label &&
             <div className="navbar-item">
-              <div className="buttons">
-                <a className="button is-yellow is-rounded">
-                  Get in Touch
-                </a>
-
-              </div>
+                <Button
+                label={this.props.cta.button_label}
+                link={`/${this.props.cta.page_link[0].post_type}?slug=${this.props.cta.page_link[0].post_name}`}
+                type={this.props.cta.link_type}
+                customClass={'is-primary'}
+                />
             </div>
+              }
           </div>
         </div>
       </nav>

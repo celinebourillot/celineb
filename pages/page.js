@@ -9,17 +9,15 @@ import { sliceComponentsHelper } from "../helpers/SliceComponentsHelpers";
 
 class Post extends Component {
     static async getInitialProps(context) {
-        const { slug, post_type } = context.query;
+        const { slug } = context.query;
 
         const res = await fetch(
-            `${Config.apiUrl}/postlight/v1/${post_type}?slug=${slug}`
+            `${Config.apiUrl}/postlight/v1/page?slug=${slug}`
         );
-
         const post = await res.json();
         return { post };
 
     }
-
 
     render() {
         if (!this.props.post.title) return <Error statusCode={404} />;

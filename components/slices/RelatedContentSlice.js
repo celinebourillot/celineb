@@ -5,6 +5,7 @@ import Moment from "react-moment";
 export default function ContentSlice(props) {
 
     const {
+        title,
         content
     } = props.data;
 
@@ -14,14 +15,16 @@ export default function ContentSlice(props) {
 
       <section className="section related_content_block">
         <div className="container">
+        <h3>{title}</h3>
         <div className="columns">
+
                 {content && content.map((column, index) => (
       						<div className="column" key={index}>
 
                   <div className="card">
                     {column.acf.featured_image &&
                       <div className="card-image">
-                        <figure className="image is-4by3">
+                        <figure className="image">
                           <img src={column.acf.featured_image.sizes.thumbnail} alt="Placeholder image"/>
                         </figure>
                       </div>

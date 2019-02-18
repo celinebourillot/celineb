@@ -9,7 +9,7 @@ import { sliceComponentsHelper } from "../helpers/SliceComponentsHelpers";
 class Index extends Component {
     static async getInitialProps(context) {
         const pageRes = await fetch(
-            `${Config.apiUrl}/wp-json/postlight/v1/page?slug=sample-page`
+            `${Config.apiUrl}/postlight/v1/page?slug=sample-page`
         );
         const page = await pageRes.json();
 
@@ -20,7 +20,7 @@ class Index extends Component {
 
         return (
             <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
-                
+
                 {
                     sliceComponentsHelper(this.props.page.acf.flexible_content)
                 }

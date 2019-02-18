@@ -10,9 +10,10 @@ export default function Button(props) {
         customClass
     } = props;
 
+
     if (label && link ) return (
         <Link href={link}>
-            <a className={`button is-rounded ${customClass}`}>
+            <a className={`button is-rounded ${customClass}`} target={type === "External" ? "_blank" : ""}>
                 {label}
             </a>
         </Link>

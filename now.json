@@ -1,0 +1,15 @@
+{
+  "alias": ["celineb.me"],
+  "version": 2,
+  "name": "celineb",
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": ".*", "headers":
+      {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
+}

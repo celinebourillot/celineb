@@ -10,10 +10,13 @@ class Layout extends Component {
 
       return (
           <div>
-              <Header />
-              <Menu menu={this.props.headerMenu} logo={this.props.options.main_logo} />
-              {this.props.children}
-              <Footer />
+            <Header favicon={this.props.options.favicon_png.length > 0 ? this.props.options.favicon_png : ''}/>
+            <Menu
+            menu={this.props.headerMenu}
+            logo={this.props.options.main_logo}
+            cta={this.props.options.header_call_to_action} />
+            {this.props.children}
+            <Footer />
           </div>
       );
     }

@@ -23,7 +23,7 @@ class CTASlice extends React.Component {
                 {quote && <h3>{quote}</h3>}
                 <Button
                 label={button_label}
-                link={link_type === 'Internal'? select_page : link_url}
+                link={link_type === 'Internal'? `/${select_page[0].post_type}?slug=${select_page[0].post_name}` : link_url}
                 type={link_type}
                 customClass={'is-primary is-yellow'}
                 />

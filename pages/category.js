@@ -11,12 +11,12 @@ class Category extends Component {
     static async getInitialProps(context) {
         const { slug } = context.query;
         const categoriesRes = await fetch(
-            `${Config.apiUrl}/wp-json/wp/v2/categories?slug=${slug}`
+            `${Config.apiUrl}/wp/v2/categories?slug=${slug}`
         );
         const categories = await categoriesRes.json();
         if (categories.length > 0) {
             const postsRes = await fetch(
-                `${Config.apiUrl}/wp-json/wp/v2/posts?_embed&categories=${
+                `${Config.apiUrl}/wp/v2/posts?_embed&categories=${
                     categories[0].id
                 }`
             );

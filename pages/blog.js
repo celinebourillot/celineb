@@ -11,7 +11,7 @@ class Blog extends Component {
     static async getInitialProps(context) {
         const { slug } = context.query;
         const postsRes = await fetch(
-            `${Config.apiUrl}/wp-json/wp/v2/posts?_embed`
+            `${Config.apiUrl}/wp/v2/posts?_embed`
         );
         const posts = await postsRes.json();
         return { posts };
@@ -22,17 +22,17 @@ class Blog extends Component {
 
         const posts = this.props.posts.map((post, index) => {
             return (
-              <div className="column" key={index}>
+              <div className="column is-4" key={index}>
 
               <div className="card">
               <Link
                 href={`/post?slug=${post.slug}&post_type=post`}
               >
               <div>
-                {post.acf.banner_image &&
+                {post.acf.featured_image.sizes.thumbnail &&
                   <div className="card-image">
-                    <figure className="image is-4by3">
-                      <img src={post.acf.banner_image} alt="Placeholder image"/>
+                    <figure className="image">
+                      <img src={post.acf.featured_image.sizes.thumbnail} alt={post.title.rendered}/>
                     </figure>
                   </div>
                 }
@@ -62,14 +62,24 @@ class Blog extends Component {
         });
         return (
             <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
-                <div className="container">
-                  <h1>Blog</h1>
+            <section className="hero is-relative is-primary">
+
+              <div className="hero-body">
+                <div className="container align-center">
+                  <h1>
+                    Blog
+                  </h1>
+
                 </div>
+              </div>
+            </section>
+            <section className="section">
                 <div className="container">
-                  <div className="columns">
+                  <div className="columns is-multiline">
                     {posts}
                   </div>
                 </div>
+              </section>
             </Layout>
         );
     }

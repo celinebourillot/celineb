@@ -1,8 +1,11 @@
 .cta-block {
 
   background: $gradient;
+  text-align: center;
 
-  h3, h4 {
+  h3 {
     color: $white;
+    font-size: $medium-text;
+    line-height: 50px;
   }
 }
