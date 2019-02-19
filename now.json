@@ -3,8 +3,8 @@
   "version": 2,
   "name": "celineb",
   "builds": [
-    { "src": "next.config.js", "use": "@now/next" }
-  ],
-  "builds": [ { "src": "server.js", "use": "@now/node" }]
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "server.js", "use": "@now/node" }
+  ]
 
 }
