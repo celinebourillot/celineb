@@ -22,6 +22,8 @@ class CTASlice extends React.Component {
                 {title && <h4>title</h4>}
                 {quote && <h3>{quote}</h3>}
                 <Button
+                slug={select_page[0].post_name}
+                post_type={select_page[0].post_type}
                 label={button_label}
                 link={link_type === 'Internal'? `/${select_page[0].post_type}?slug=${select_page[0].post_name}` : link_url}
                 type={link_type}

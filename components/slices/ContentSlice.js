@@ -42,6 +42,8 @@ export default function ContentSlice(props) {
                             }}
                         />
                         <Button
+                        slug={column.select_page && column.select_page[0].post_name}
+                        post_type={column.select_page && column.select_page[0].post_type}
                         label={column.button_label}
                         link={column.link_type === 'Internal' && column.select_page ? `/${column.select_page[0].post_type}?slug=${column.select_page[0].post_name}` : column.link_url}
                         type={column.link_type}

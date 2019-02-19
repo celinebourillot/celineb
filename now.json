@@ -5,11 +5,6 @@
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
   ],
-  "routes": [
-    { "src": ".*", "headers":
-      {
-        "Access-Control-Allow-Origin": "*"
-      }
-    }
-  ]
+  "builds": [ { "src": "server.js", "use": "@now/node" }]
+
 }

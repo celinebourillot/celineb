@@ -2,7 +2,6 @@ const path = require('path')
 const glob = require('glob')
 
 module.exports = {
-  target: 'serverless',
   webpack: (config, { dev }) => {
     config.module.rules.push(
       {

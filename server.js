@@ -12,13 +12,13 @@ app
 
         server.get("/post/:slug", (req, res) => {
             const actualPage = "/post";
-            const queryParams = { slug: req.params.slug, apiRoute: "post" };
+            const queryParams = { slug: req.params.slug, post_type: "post" };
             app.render(req, res, actualPage, queryParams);
         });
 
         server.get("/page/:slug", (req, res) => {
-            const actualPage = "/post";
-            const queryParams = { slug: req.params.slug, apiRoute: "page" };
+            const actualPage = "/page";
+            const queryParams = { slug: req.params.slug, post_type: "page" };
             app.render(req, res, actualPage, queryParams);
         });
 
