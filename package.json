@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "next",
+        "dev": "node server.js",
         "build": "next build",
         "start": "next start",
         "now-build": "yarn build"
@@ -21,6 +21,7 @@
         "moment": "^2.24.0",
         "next": "^8.0.0",
         "next-routes": "^1.4.2",
+        "now": "^14.0.0",
         "react": "^16.4.0",
         "react-highlight": "^0.12.0",
         "react-highlight.js": "^1.0.7",

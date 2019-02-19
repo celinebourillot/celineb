@@ -27,6 +27,7 @@ class Menu extends Component {
         const actualPage = item.object === "category" ? "category" : "post";
         return (
             <Link
+                as={`/${item.object}/${slug}`}
                 href={`/${actualPage}?slug=${slug}&post_type=${item.object}`}
                 key={item.ID}
             >
@@ -57,7 +58,9 @@ class Menu extends Component {
               this.props.cta && this.props.cta.button_label &&
             <div className="navbar-item">
                 <Button
+                slug={this.props.cta.page_link[0].post_name}
                 label={this.props.cta.button_label}
+                post_type={this.props.cta.page_link[0].post_type}
                 link={`/${this.props.cta.page_link[0].post_type}?slug=${this.props.cta.page_link[0].post_name}`}
                 type={this.props.cta.link_type}
                 customClass={'is-primary'}

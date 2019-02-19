@@ -27,6 +27,7 @@ class Blog extends Component {
               <div className="card">
               <Link
                 href={`/post?slug=${post.slug}&post_type=post`}
+                as={`/post/${post.slug}`}
               >
               <div>
                 {post.acf.featured_image.sizes.thumbnail &&
@@ -62,7 +63,7 @@ class Blog extends Component {
         });
         return (
             <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
-            <section className="hero is-relative is-primary">
+            <section className="hero is-relative is-secondary">
 
               <div className="hero-body">
                 <div className="container align-center">

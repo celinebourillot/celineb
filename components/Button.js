@@ -7,12 +7,14 @@ export default function Button(props) {
         link,
         label,
         type,
+        post_type,
+        slug,
         customClass
     } = props;
 
 
     if (label && link ) return (
-        <Link href={link}>
+        <Link href={link} as={`/${post_type}/${slug}`}>
             <a className={`button is-rounded ${customClass}`} target={type === "External" ? "_blank" : ""}>
                 {label}
             </a>
