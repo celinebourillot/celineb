@@ -62,7 +62,7 @@ class Blog extends Component {
         });
         return (
             <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
-            <section className="hero is-relative is-primary">
+            <section className="hero is-relative is-secondary">
 
               <div className="hero-body">
                 <div className="container align-center">
