@@ -581,7 +581,7 @@ function (_react_1$default$Comp) {
     value: function getInitialProps(_ref) {
       var res = _ref.res,
           err = _ref.err;
-      var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+      var statusCode = res ? res.statusCode : err ? err.statusCode : null;
       return {
         statusCode: statusCode
       };
