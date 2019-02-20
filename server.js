@@ -1,37 +1,55 @@
-const express = require('express')
-const routes = require('./routes')
-const compression = require('compression')
-const next = require('next')
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = routes.getRequestHandler(app);
-const port = process.env.PORT || 3000;
+const express = require("express");
+const next = require("next");
 
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-app.prepare()
+app
+    .prepare()
     .then(() => {
-        const server = express()
+        const server = express();
 
-        // Middleware
-        server.use(compression())
+        server.get("/post/:slug", (req, res) => {
+            const actualPage = "/post";
+            const queryParams = { slug: req.params.slug, post_type: "post" };
+            app.render(req, res, actualPage, queryParams);
+        });
 
-        // Custom API endpoints
-        server.get('/api/test', (req, res) => {
-            return res.status(200).json({ success: true })
-        })
+        server.get("/page/:slug", (req, res) => {
+            const actualPage = "/page";
+            const queryParams = { slug: req.params.slug, post_type: "page" };
+            app.render(req, res, actualPage, queryParams);
+        });
 
-        // Next.js
-        server.get('*', async (req, res) => {
-            return handle(req, res)
-        })
+        server.get("/project/:slug", (req, res) => {
+            const actualPage = "/project";
+            const queryParams = { slug: req.params.slug, post_type: "project" };
+            app.render(req, res, actualPage, queryParams);
+        });
 
-        // Listen port 3000
-        server.listen(port, (err) => {
-            if (err) throw err
-            console.log('> Ready on port: ' + port)
-        })
+        server.get("/category/:slug", (req, res) => {
+            const actualPage = "/category";
+            const queryParams = { slug: req.params.slug };
+            app.render(req, res, actualPage, queryParams);
+        });
+
+        server.get("/_preview/:id/:wpnonce", (req, res) => {
+            const actualPage = "/preview";
+            const queryParams = { id: req.params.id, wpnonce: req.params.wpnonce };
+            app.render(req, res, actualPage, queryParams);
+        });
+
+        server.get("*", (req, res) => {
+            return handle(req, res);
+        });
+
+        server.listen(3000, err => {
+            if (err) throw err;
+            console.log("> Ready on http://localhost:3000");
+        });
     })
-    .catch((ex) => {
-        console.error(ex.stack)
-        process.exit(1)
-    })
+    .catch(ex => {
+        console.error(ex.stack);
+        process.exit(1);
+    });

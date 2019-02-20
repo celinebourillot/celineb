@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Link from "next/link";
 import Moment from "react-moment";
+import Button from '../Button.js';
 
 export default function ContentSlice(props) {
 
@@ -43,10 +44,14 @@ export default function ContentSlice(props) {
 
                       </div>
 
-
-                      <Link href={`/post?slug=${column.post_name}&post_type=${column.post_type}`}>
-                          <button className="button is-primary">Read more</button>
-                      </Link>
+                      <Button
+                      slug={column.post_name}
+                      post_type={column.post_type}
+                      label={"Read More"}
+                      link={`/${column.post_type}?slug=${column.post_name}&post_type=${column.post_type}`}
+                      type={"Internal"}
+                      customClass={'is-primary'}
+                      />
                     </div>
                   </div>
                 </div>

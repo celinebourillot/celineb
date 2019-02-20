@@ -6,10 +6,9 @@
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
-    { "src": ".*", "headers":
-      {
-        "Access-Control-Allow-Origin": "*"
-      }
-    }
+    {"src": "/post/(?<slug>[^/]+)$", "dest": "/post?slug=$slug"},
+    {"src": "/project/(?<slug>[^/]+)$", "dest": "/project?slug=$slug"},
+    {"src": "/page/(?<slug>[^/]+)$", "dest": "/page?slug=$slug"}
   ]
+
 }

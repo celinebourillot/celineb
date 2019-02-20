@@ -11,7 +11,7 @@ class Blog extends Component {
     static async getInitialProps(context) {
         const { slug } = context.query;
         const postsRes = await fetch(
-            `${Config.apiUrl}/wp/v2/posts?_embed`
+            `${Config.apiUrl}/wp/v2/project`
         );
         const posts = await postsRes.json();
         return { posts };
@@ -26,11 +26,11 @@ class Blog extends Component {
 
               <div className="card">
               <Link
-                href={`/post?slug=${post.slug}&post_type=post`}
-                as={`/post/${post.slug}`}
+                href={`/project?slug=${post.slug}`}
+                as={`/project/${post.slug}`}
               >
               <div>
-                {post.acf.featured_image.sizes.thumbnail &&
+                {post.acf.featured_image && post.acf.featured_image.sizes.thumbnail &&
                   <div className="card-image">
                     <figure className="image">
                       <img src={post.acf.featured_image.sizes.thumbnail} alt={post.title.rendered}/>

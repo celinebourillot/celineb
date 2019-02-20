@@ -9,27 +9,25 @@ import { sliceComponentsHelper } from "../helpers/SliceComponentsHelpers";
 
 class Post extends Component {
     static async getInitialProps(context) {
-        const { slug, post_type } = context.query;
+        const { slug } = context.query;
 
         const res = await fetch(
-            `${Config.apiUrl}/postlight/v1/post?slug=${slug}`
+            `${Config.apiUrl}/wp/v2/project?slug=${slug}`
         );
-
         const post = await res.json();
         return { post };
 
     }
 
-
     render() {
-        if (!this.props.post.title) return <Error statusCode={404} />;
+        //if (!this.props.post.title) return <Error statusCode={404} />;
 
 
         return (
           <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
 
-              {this.props.post.acf.flexible_content &&
-                  sliceComponentsHelper(this.props.post.acf.flexible_content)
+              {this.props.post[0].acf.flexible_content &&
+                  sliceComponentsHelper(this.props.post[0].acf.flexible_content)
               }
 
           </Layout>

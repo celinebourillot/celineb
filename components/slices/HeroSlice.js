@@ -50,6 +50,8 @@ export default function HeroSlice(props) {
 
             <Button
             label={button_label}
+            slug={select_page && select_page[0].post_name}
+            post_type={select_page && select_page[0].post_type}
             link={link_type === 'Internal' && select_page ? `/${select_page[0].post_type}?slug=${select_page[0].post_name}` : link_url}
             type={link_type}
             customClass={'is-primary'} />
