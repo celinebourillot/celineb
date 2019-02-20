@@ -7,7 +7,7 @@ import PageWrapper from "../components/PageWrapper.js";
 import Menu from "../components/Menu.js";
 import { Config } from "../config.js";
 
-class Blog extends Component {
+class Projects extends Component {
     static async getInitialProps(context) {
         const { slug } = context.query;
         const postsRes = await fetch(
@@ -68,7 +68,7 @@ class Blog extends Component {
               <div className="hero-body">
                 <div className="container align-center">
                   <h1>
-                    Blog
+                    Projects
                   </h1>
 
                 </div>
@@ -86,4 +86,4 @@ class Blog extends Component {
     }
 }
 
-export default PageWrapper(Blog);
+export default PageWrapper(Projects);

@@ -7,7 +7,7 @@ import PageWrapper from "../components/PageWrapper.js";
 import { Config } from "../config.js";
 import { sliceComponentsHelper } from "../helpers/SliceComponentsHelpers";
 
-class Post extends Component {
+class Project extends Component {
     static async getInitialProps(context) {
         const { slug } = context.query;
 
@@ -35,4 +35,4 @@ class Post extends Component {
     }
 }
 
-export default PageWrapper(Post);
+export default PageWrapper(Project);
