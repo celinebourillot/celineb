@@ -22,6 +22,12 @@ app
             app.render(req, res, actualPage, queryParams);
         });
 
+        server.get("/project/:slug", (req, res) => {
+            const actualPage = "/project";
+            const queryParams = { slug: req.params.slug, post_type: "project" };
+            app.render(req, res, actualPage, queryParams);
+        });
+
         server.get("/category/:slug", (req, res) => {
             const actualPage = "/category";
             const queryParams = { slug: req.params.slug };

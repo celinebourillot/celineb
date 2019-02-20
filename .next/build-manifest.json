@@ -1,6 +1,6 @@
 {
   "devFiles": [
-    "static/development/dll/dll_bf75712246363e6d697c.js"
+    "static/development/dll/dll_504143a917ee81c7e3cc.js"
   ],
   "pages": {
     "/_app": [
@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/post": [
+    "/project": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/page": [
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

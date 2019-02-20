@@ -3,8 +3,12 @@
   "version": 2,
   "name": "celineb",
   "builds": [
-    { "src": "next.config.js", "use": "@now/next" },
-    { "src": "server.js", "use": "@now/node" }
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    {"src": "/post/(?<slug>[^/]+)$", "dest": "/post?slug=$slug"},
+    {"src": "/project/(?<slug>[^/]+)$", "dest": "/project?slug=$slug"},
+    {"src": "/page/(?<slug>[^/]+)$", "dest": "/page?slug=$slug"}
   ]
 
 }
