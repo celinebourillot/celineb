@@ -13,9 +13,17 @@ export default function Button(props) {
     } = props;
 
 
-    if (label && link ) return (
+    if (label && link && type === "Internal") return (
         <Link href={link} as={`/${post_type}/${slug}`}>
-            <a className={`button is-rounded ${customClass}`} target={type === "External" ? "_blank" : ""}>
+            <a className={`button is-rounded ${customClass}`}>
+                {label}
+            </a>
+        </Link>
+    )
+
+    if (label && link && type === "External") return (
+        <Link href={link}>
+            <a className={`button is-rounded ${customClass}`} target="_blank">
                 {label}
             </a>
         </Link>
