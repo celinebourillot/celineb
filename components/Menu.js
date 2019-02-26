@@ -24,11 +24,11 @@ class Menu extends Component {
             );
         }
         const slug = this.getSlug(item.url);
-        const actualPage = item.object === "category" ? "category" : "post";
+        const actualPage = item.object === "category" ? "category" : "page";
         return (
             <Link
                 as={`/${item.object}/${slug}`}
-                href={`/${actualPage}?slug=${slug}&post_type=${item.object}`}
+                href={`/${actualPage}?slug=${slug}`}
                 key={item.ID}
             >
                 <a className="navbar-item">{item.title}</a>

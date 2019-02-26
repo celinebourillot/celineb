@@ -37,8 +37,8 @@ export default function ContentSlice(props) {
                         {column.acf.intro &&
                           <p>{column.acf.intro}</p>
                         }
-                        {column.post_type === "post" &&
-                        <Moment format="DD/MM/YYYY">{column.post_date}</Moment>
+                        {/*column.post_type === "post" &&
+                        <Moment format="DD/MM/YYYY">{column.post_date}</Moment>*/
 
                         }
 
