@@ -17,7 +17,7 @@ export default function USPSlice(props) {
       <section className="section usps">
         <div className="container">
         {title && <h3>{title}</h3>}
-        {subtitle && <p>{subtitle}</p>}
+        {subtitle && <p className="intro">{subtitle}</p>}
         <div className="columns">
                 {columns && columns.map((column, index) => (
       						<div className="column" key={index}>

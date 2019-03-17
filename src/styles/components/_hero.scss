@@ -1,0 +1,51 @@
+.hero {
+  background: $gradient;
+  color: $white;
+  .is-fullheight {
+    min-height: 100vh;
+  }
+
+  &-body {
+    padding-left: 9rem;
+  }
+
+  .intro {
+    font-size: $normal-text;
+    max-width: 70%;
+    margin:$baseline 0;
+  }
+
+  &_default {
+    background: $rainbow-gradient;
+    color: $white;
+    text-align: center;
+    padding: $baseline*6 0 $baseline*2;
+
+    h1 {
+      font-size: $medium-text;
+    }
+
+    .intro {
+      max-width: 45rem;
+      display: block;
+      margin: 0 auto;
+      font-size: $normal-text;
+    }
+
+    a {
+      color: $white;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: $small-text;
+      border-bottom: 1px solid $white;
+      padding:2px 0;
+      margin: 0 10px;
+      letter-spacing: 1px;
+
+      &:hover {
+        color:$primary;
+        border-bottom: 1px solid $primary;
+      }
+    }
+  }
+}

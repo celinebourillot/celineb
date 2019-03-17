@@ -1,0 +1,19 @@
+.card {
+  border: none;
+  box-shadow:$shadow;
+  transition: all 0.4s ease-in;
+  border-radius: 4px;
+  height: 100%;
+
+  .card-image {
+    padding:$baseline*2 $baseline*2 0;
+  }
+
+  .card-content {
+    padding: $baseline*2;
+  }
+
+  &:hover {
+    background: $light;
+  }
+}

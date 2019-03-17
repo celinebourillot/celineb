@@ -1,6 +1,6 @@
 {
   "devFiles": [
-    "static/development/dll/dll_bf75712246363e6d697c.js"
+    "static/development/dll/dll_504143a917ee81c7e3cc.js"
   ],
   "pages": {
     "/_app": [
@@ -11,7 +11,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/post": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
@@ -19,7 +19,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/page": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/project": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

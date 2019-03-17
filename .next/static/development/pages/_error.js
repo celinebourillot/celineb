@@ -1279,7 +1279,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.5' };
+var core = module.exports = { version: '2.6.4' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3656,11 +3656,11 @@ var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*!
 
 var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js"));
 
-var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js"));
-
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js"));
 
 var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js"));
+
+var _assertThisInitialized2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js"));
 
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js"));
 
@@ -3708,8 +3708,8 @@ function withSideEffect() {
       _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SideEffect).call(this, props));
 
       if (isServer) {
-        mountedInstances.add((0, _assertThisInitialized2.default)(_this));
-        emitChange((0, _assertThisInitialized2.default)(_this));
+        mountedInstances.add((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+        emitChange((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
       }
 
       return _this;
@@ -3860,7 +3860,7 @@ function (_react_1$default$Comp) {
     value: function getInitialProps(_ref) {
       var res = _ref.res,
           err = _ref.err;
-      var statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
+      var statusCode = res ? res.statusCode : err ? err.statusCode : null;
       return {
         statusCode: statusCode
       };
@@ -4649,34 +4649,34 @@ module.exports = ReactPropTypesSecret;
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_53ce0dd76d39b8b881b1 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_53ce0dd76d39b8b881b1 */ "dll-reference dll_53ce0dd76d39b8b881b1"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_53ce0dd76d39b8b881b1 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_53ce0dd76d39b8b881b1 */ "dll-reference dll_53ce0dd76d39b8b881b1"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/react/index.js");
 
 /***/ }),
 
-/***/ "dll-reference dll_53ce0dd76d39b8b881b1":
+/***/ "dll-reference dll_2a19476def445b94e0e9":
 /*!*******************************************!*\
-  !*** external "dll_53ce0dd76d39b8b881b1" ***!
+  !*** external "dll_2a19476def445b94e0e9" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_53ce0dd76d39b8b881b1;
+module.exports = dll_2a19476def445b94e0e9;
 
 /***/ })
 

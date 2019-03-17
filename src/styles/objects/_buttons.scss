@@ -1,24 +1,38 @@
 .button {
   transition: all 0.4s ease-in;
   margin: $baseline 0;
+  font-family: $title-font;
+  text-transform: uppercase;
+  border-radius: 0;
+  letter-spacing: 1px;
+  background: $white;
+  color: $cta-colour;
+  border: 2px solid $white;
+   &:hover {
+     background: transparent;
+     border: 2px solid $white;
+     color: $white;
+   }
 }
 
 .button.is-primary {
-  background: $primary;
-  border: 2px solid $primary;
+  background: $cta-colour;
+  border: 2px solid $cta-colour;
+  color: $white;
   &:hover {
     background: transparent;
-    border:2px solid $primary;
-    color: $primary;
+    border: 2px solid $cta-colour;
+    color: $cta-colour;
   }
 }
 
-.button.is-yellow {
-  background: $yellow;
-  color: $primary;
-  border: none;
+.button.is-secondary {
+  background: $theme-dark;
+  color: $white;
+  border: 2px solid $theme-dark;
    &:hover {
-     background: $primary;
-     color: $white;
+     background: transparent;
+     border: 2px solid $theme-dark;
+     color: $theme-dark;
    }
 }

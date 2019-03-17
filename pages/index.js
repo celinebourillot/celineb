@@ -19,7 +19,15 @@ class Index extends Component {
     render() {
 
         return (
-            <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
+          <Layout
+            headerMenu={this.props.headerMenu}
+            options={this.props.options.acf}
+            pageSlug={""}
+            meta_description={this.props.page.acf.meta_description}
+            meta_title={this.props.page.acf.page_title}
+            meta_image={this.props.page.acf.image_seo}
+            page_url={""}
+            >
 
                 {
                     sliceComponentsHelper(this.props.page.acf.flexible_content)

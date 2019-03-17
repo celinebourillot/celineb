@@ -8,6 +8,8 @@ import RelatedContentSlice from '../components/slices/RelatedContentSlice';
 import TestimonialsSlice from '../components/slices/TestimonialsSlice';
 
 export const sliceComponentsHelper = (slices) => {
+
+  console.log(slices)
     let componentsToDisplay = [];
     componentsToDisplay = (!slices || !slices.length) ? null : slices.map((slice, index) => {
         if (slice === null || !slice.acf_fc_layout) return ''

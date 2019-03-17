@@ -5,4 +5,9 @@
   &:last-of-type {
     padding-bottom: $baseline*2;
   }
+
+  img {
+    border-right:10px solid $theme-light;
+    border-bottom: 10px solid $theme-light;
+  }
 }

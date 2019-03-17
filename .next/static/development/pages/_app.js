@@ -1414,7 +1414,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.5' };
+var core = module.exports = { version: '2.6.4' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -6621,12 +6621,12 @@ module.exports = ReactPropTypesSecret;
 
 /***/ "./node_modules/next/node_modules/webpack/buildin/global.js":
 /*!************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/webpack/buildin/global.js from dll-reference dll_53ce0dd76d39b8b881b1 ***!
+  !*** delegated ./node_modules/next/node_modules/webpack/buildin/global.js from dll-reference dll_2a19476def445b94e0e9 ***!
   \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_53ce0dd76d39b8b881b1 */ "dll-reference dll_53ce0dd76d39b8b881b1"))("./node_modules/next/node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/next/node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -6677,12 +6677,12 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_53ce0dd76d39b8b881b1 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_53ce0dd76d39b8b881b1 */ "dll-reference dll_53ce0dd76d39b8b881b1"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -7434,7 +7434,7 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.2
+/** @license React v16.8.1
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -7684,12 +7684,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_53ce0dd76d39b8b881b1 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_53ce0dd76d39b8b881b1 */ "dll-reference dll_53ce0dd76d39b8b881b1"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -9245,14 +9245,14 @@ module.exports = {
 
 /***/ }),
 
-/***/ "dll-reference dll_53ce0dd76d39b8b881b1":
+/***/ "dll-reference dll_2a19476def445b94e0e9":
 /*!*******************************************!*\
-  !*** external "dll_53ce0dd76d39b8b881b1" ***!
+  !*** external "dll_2a19476def445b94e0e9" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_53ce0dd76d39b8b881b1;
+module.exports = dll_2a19476def445b94e0e9;
 
 /***/ })
 

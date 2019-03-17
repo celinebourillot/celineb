@@ -21,14 +21,7 @@ export default function TestimonialsSlice(props) {
 			{
 				breakpoint: 1920,
 				settings: {
-					slidesToShow: 3,
-					infinite: false
-				}
-			},
-			{
-				breakpoint: 1600,
-				settings: {
-					slidesToShow: 3,
+					slidesToShow: 2,
 					infinite: false
 				}
 			},
@@ -55,33 +48,37 @@ export default function TestimonialsSlice(props) {
 				<link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 			</Head>
-			<section className="testimonials-carousel">
+			<section className="testimonials-carousel section">
 				<div className="container">
 							<h3>{title}</h3>
 							<div className="testimonials">
 								<Slider {...settings}>
 									{
 										testimonials.map((testimonial, index) => (
-											<div className="box">
+											<div className="testimonial" key="index">
+
 											  <article className="media">
 												{ testimonial.acf.image &&
 													<div className="media-left">
 													 <figure className="image is-64x64">
-														 <img src={testimonial.acf.image.sizes.thumbnail} alt="Image"/>
+														 <img src={testimonial.acf.image.sizes.square_thumb} alt="Image"/>
 													 </figure>
 												 </div>
 												}
 											    <div className="media-content">
 											      <div className="content">
 											        <p>
-											          <strong>{testimonial.acf.name}</strong>
-											          <br/>
+
 											          {testimonial.acf.testimonial}
+																<strong>{testimonial.acf.name}</strong>
 											        </p>
 											      </div>
 
+
+
 											    </div>
 											  </article>
+
 											</div>
 
 										))

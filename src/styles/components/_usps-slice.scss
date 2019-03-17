@@ -1,5 +1,28 @@
 .usps {
 
+  background: $light;
+
+  .usp {
+    height: 100%;
+  }
+
+  .usp_content {
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: $shadow;
+    background: $gradient;
+    padding:$baseline*2;
+    color:$white;
+    height: 100%;
+
+    h4 {
+      color:$white;
+      text-transform: uppercase;
+      padding-bottom: $baseline;
+      display: block;
+    }
+  }
+
   h3 {
     text-align: center;
   }

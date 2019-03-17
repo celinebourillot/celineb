@@ -6,6 +6,7 @@ import Error from "next/error";
 import PageWrapper from "../components/PageWrapper.js";
 import Menu from "../components/Menu.js";
 import { Config } from "../config.js";
+import DefaultHero from "../components/DefaultHero.js";
 
 class Projects extends Component {
     static async getInitialProps(context) {
@@ -17,6 +18,7 @@ class Projects extends Component {
         return { posts };
     }
     render() {
+
         if (this.props.posts.length == 0)
             return <Error statusCode={404} />;
 
@@ -63,17 +65,10 @@ class Projects extends Component {
         });
         return (
             <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
-            <section className="hero is-relative is-secondary">
 
-              <div className="hero-body">
-                <div className="container align-center">
-                  <h1>
-                    Projects
-                  </h1>
+              <DefaultHero
+              title={"Projects"}/>
 
-                </div>
-              </div>
-            </section>
             <section className="section">
                 <div className="container">
                   <div className="columns is-multiline">

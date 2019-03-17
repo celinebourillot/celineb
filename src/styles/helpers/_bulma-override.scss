@@ -14,6 +14,13 @@
   font-size: $small-text;
 }
 
+.intro {
+  max-width: 45rem;
+  display: block;
+  margin: 0 auto $baseline*2;
+  font-size: $normal-text;
+}
+
 //OVERLAY
 
 .is-overlay--light {
@@ -72,6 +79,15 @@
 //POSITION
 .is-relative {
   position: relative;
+}
+
+.display-none {
+  display: none;
+}
+
+.no-body-scroll {
+  position: fixed;
+  width: 100%;
 }
 
 //RESPONSIVE YOUTUBE Video

@@ -10,15 +10,35 @@ app
     .then(() => {
         const server = express();
 
+        server.get("/robots.txt", (req, res) => {
+            const actualPage = "/robots.txt";
+            app.render(req, res, actualPage);
+        });
+
+        server.get("/sitemap.xml", (req, res) => {
+            const actualPage = "/sitemap.xml";
+            app.render(req, res, actualPage);
+        });
+
+        server.get("/blog", (req, res) => {
+            const actualPage = "/blog";
+            app.render(req, res, actualPage);
+        });
+
+        server.get("/projects", (req, res) => {
+            const actualPage = "/projects";
+            app.render(req, res, actualPage);
+        });
+
         server.get("/post/:slug", (req, res) => {
             const actualPage = "/post";
             const queryParams = { slug: req.params.slug, post_type: "post" };
             app.render(req, res, actualPage, queryParams);
         });
 
-        server.get("/page/:slug", (req, res) => {
+        server.get("/:slug", (req, res) => {
             const actualPage = "/page";
-            const queryParams = { slug: req.params.slug, post_type: "page" };
+            const queryParams = { slug: req.params.slug };
             app.render(req, res, actualPage, queryParams);
         });
 

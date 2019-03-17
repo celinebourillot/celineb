@@ -1,6 +1,12 @@
 body {
   font-family: $text-font;
   font-size: $small-text;
+  color: $text-colour;
+}
+
+a {
+  color: $theme-light;
+  transition: all 0.4s ease-in;
 }
 
 h1 {
@@ -10,10 +16,9 @@ h1 {
 
 h3 {
   font-family: $title-font;
-  font-size: $medium-text;
+  font-size: $normal-text;
   color: $primary;
-  padding-bottom: 1.5rem;
-  text-align: center;
+  padding-bottom: 0;
   line-height: 55px;
 }
 
@@ -22,4 +27,12 @@ h4 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.section {
+  padding:$baseline*3 0;
+}
+
+.svg-inline--fa {
+  height:1.5em;
 }

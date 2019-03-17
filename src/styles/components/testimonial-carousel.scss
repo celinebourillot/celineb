@@ -1,0 +1,62 @@
+.testimonials-carousel {
+  h3 {
+    text-align: center;
+  }
+}
+
+.testimonials {
+ padding: $baseline*2 0;
+
+  .slick-list {
+      .slick-track {
+          display: flex !important;
+          .slick-slide {
+              height: inherit !important;
+              padding: 0 1rem;
+              @include mq($until: mb) {
+                  padding: 0;
+              }
+              > div {
+                  height: 100%;
+              }
+              .testimonial {
+                  height: 100%;
+                  border-radius: 4px;
+                  box-shadow: $shadow;
+                  background: $gradient;
+                  padding:$baseline*2;
+                  color:$white;
+
+                  strong {
+                    color:$white;
+                    text-transform: uppercase;
+                    padding-top: $baseline;
+                    display: block;
+                  }
+
+                  img {
+                    border-radius: 100px;
+                  }
+              }
+          }
+      }
+  }
+
+.slick-dots {
+  bottom:-50px;
+}
+
+.slick-dots li button::before {
+  color: $theme-dark;
+  font-size: 12px;
+  line-height: 18px;
+  border: 2px solid $white;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $theme-light;
+  border: 2px solid $theme-light;
+  border-radius: 10px;
+}
+}

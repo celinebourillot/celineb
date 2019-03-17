@@ -1,5 +1,86 @@
 .navbar {
-  img {
-    width: 50px;
+  position: fixed;
+  width: 100%;
+  background: transparent;
+
+  .navbar-item {
+    color: $white;
+    font-weight: bold;
+
+    &:hover {
+      background: transparent;
+      color: $cta-colour;
+    }
+
+    img {
+      width: 50px;
+      max-height: none;
+    }
+
+    span {
+      color: $cta-colour;
+    }
+
+    .svg-inline--fa {
+      width: 1.5em;
+    }
+  }
+
+}
+
+.navbar-burger {
+  position: absolute;
+  top:6px;
+  right: 6px;
+  background-color: $theme-dark;
+  width:40px;
+  height: 40px;
+  border-radius: 100px;
+  z-index:100;
+
+  span {
+    background-color: $white;
+    display: block;
+    height: 2px;
+    left: calc(50% - 10px);
+    width: 20px;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: $theme-dark;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+
+  .close-btn {
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $small-text;
+    font-weight: 600;
+    padding:5px;
+    border: 2px solid $white;
+    display: block;
+    background: transparent;
+    margin: 20px;
+  }
+
+
+  a {
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $small-text;
+    font-weight: 600;
+    transition: all 0.4 ease-in;
+    text-align: right;
+  }
+
+  a:hover {
+    color: $primary;
   }
 }

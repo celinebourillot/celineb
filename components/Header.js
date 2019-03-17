@@ -22,9 +22,24 @@ class Header extends Component {
                         content="width=device-width, initial-scale=1"
                     />
                     <meta charSet="utf-8" />
+
+                    //GA Code
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: this.props.ga_code
+                        }}
+                    />
+
+                    <link rel="shortcut icon" type="image/png" href={this.props.favicon}/>
                     <title>
-                        Celine B
+                        {this.props.meta_title} - Celine B
                     </title>
+                    <meta name="description" content={this.props.meta_description}/>
+                    <meta property="og:title" content={this.props.meta_title}/>
+                    <meta property="og:description" content={this.props.meta_description}/>
+                    <meta property="og:image" content={this.props.meta_image}/>
+                    <meta property="og:url" content={this.props.page_url}/>
+                    <meta name="twitter:card" content="summary_large_image"/>
                 </Head>
             </div>
         );

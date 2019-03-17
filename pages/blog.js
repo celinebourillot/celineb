@@ -6,6 +6,7 @@ import Error from "next/error";
 import PageWrapper from "../components/PageWrapper.js";
 import Menu from "../components/Menu.js";
 import { Config } from "../config.js";
+import DefaultHero from "../components/DefaultHero.js";
 
 class Blog extends Component {
     static async getInitialProps(context) {
@@ -63,17 +64,8 @@ class Blog extends Component {
         });
         return (
             <Layout headerMenu={this.props.headerMenu} options={this.props.options.acf}>
-            <section className="hero is-relative is-secondary">
-
-              <div className="hero-body">
-                <div className="container align-center">
-                  <h1>
-                    Blog
-                  </h1>
-
-                </div>
-              </div>
-            </section>
+            <DefaultHero
+            title={"Blog"}/>
             <section className="section">
                 <div className="container">
                   <div className="columns is-multiline">

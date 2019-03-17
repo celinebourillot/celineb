@@ -2,6 +2,7 @@
 // ---------
 @import 'helpers/variables';
 @import 'helpers/bulma-override';
+@import 'helpers/mq';
 
 // Base
 // ---------
@@ -14,10 +15,14 @@
 // Components
 // ---------
 @import 'components/navbar';
+@import 'components/hero';
 @import 'components/usps-slice';
 @import 'components/cta-block';
 @import 'components/logo-block';
 @import 'components/content-block';
+@import 'components/company-block';
+@import 'components/testimonial-carousel';
+@import 'components/card';
 
 // Bulma
 // ---------

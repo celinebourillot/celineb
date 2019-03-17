@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic'
 const Highlight = dynamic(import('react-highlight'));
 import Button from '../Button.js';
+const FormContainer = dynamic(import('../form/FormContainer.js'));
 
 export default function ContentSlice(props) {
     const {
@@ -20,7 +21,7 @@ export default function ContentSlice(props) {
       						<div className="column" key={index}>
 
                     {column.content_type === "Image" &&
-                      <div className="text-content">
+                      <div className="text-content img-container">
                         <img src={column.image} alt={column.title}/>
                       </div>
                     }
@@ -56,6 +57,12 @@ export default function ContentSlice(props) {
                       <div className="videoWrapper">
                         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${column.video_iframe}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
+
+                    }
+
+                    {column.content_type === "Form" &&
+
+                      <FormContainer id={column.form}/>
 
                     }
 
