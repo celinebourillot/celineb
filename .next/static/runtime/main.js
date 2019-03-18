@@ -1701,7 +1701,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.4' };
+var core = module.exports = { version: '2.6.5' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -7940,7 +7940,7 @@ var strip_ansi_1 = __importDefault(__webpack_require__(/*! strip-ansi */ "./node
 
 var source_map_support_1 = __webpack_require__(/*! ../source-map-support */ "./node_modules/next/dist/client/source-map-support.js");
 
-var unfetch_1 = __importDefault(__webpack_require__(/*! unfetch */ "./node_modules/unfetch/dist/unfetch.es.js")); // This alternative WebpackDevServer combines the functionality of:
+var unfetch_1 = __importDefault(__webpack_require__(/*! unfetch */ "./node_modules/next/node_modules/unfetch/dist/unfetch.es.js")); // This alternative WebpackDevServer combines the functionality of:
 // https://github.com/webpack/webpack-dev-server/blob/webpack-1/client/index.js
 // https://github.com/webpack/webpack/blob/webpack-1/hot/dev-server.js
 // It only supports their simplest configuration (hot updates on same server).
@@ -9001,7 +9001,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var router_1 = __importDefault(__webpack_require__(/*! next/router */ "./node_modules/next/router.js"));
 
-var unfetch_1 = __importDefault(__webpack_require__(/*! unfetch */ "./node_modules/unfetch/dist/unfetch.es.js"));
+var unfetch_1 = __importDefault(__webpack_require__(/*! unfetch */ "./node_modules/next/node_modules/unfetch/dist/unfetch.es.js"));
 
 var _location = location,
     hostname = _location.hostname,
@@ -9113,7 +9113,7 @@ function () {
 
                       case 2:
                         return _context3.abrupt("return", new _promise.default(function (resolve) {
-                          ws = new WebSocket("".concat(wsProtocol, "://").concat(hostname, ":").concat(60853).concat("/"));
+                          ws = new WebSocket("".concat(wsProtocol, "://").concat(hostname, ":").concat(65353).concat("/"));
 
                           ws.onopen = function () {
                             return resolve();
@@ -10880,14 +10880,103 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/next/node_modules/webpack/buildin/global.js":
-/*!************************************************************************************************************************!*\
-  !*** delegated ./node_modules/next/node_modules/webpack/buildin/global.js from dll-reference dll_2a19476def445b94e0e9 ***!
-  \************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/next/node_modules/unfetch/dist/unfetch.es.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/next/node_modules/unfetch/dist/unfetch.es.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/next/node_modules/webpack/buildin/global.js");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var index = typeof fetch=='function' ? fetch.bind() : function(url, options) {
+	options = options || {};
+	return new Promise( function (resolve, reject) {
+		var request = new XMLHttpRequest();
+
+		request.open(options.method || 'get', url);
+
+		for (var i in options.headers) {
+			request.setRequestHeader(i, options.headers[i]);
+		}
+
+		request.withCredentials = options.credentials=='include';
+
+		request.onload = function () {
+			resolve(response());
+		};
+
+		request.onerror = reject;
+
+		request.send(options.body);
+
+		function response() {
+			var keys = [],
+				all = [],
+				headers = {},
+				header;
+
+			request.getAllResponseHeaders().replace(/^(.*?):\s*([\s\S]*?)$/gm, function (m, key, value) {
+				keys.push(key = key.toLowerCase());
+				all.push([key, value]);
+				header = headers[key];
+				headers[key] = header ? (header + "," + value) : value;
+			});
+
+			return {
+				ok: (request.status/200|0) == 1,		// 200-299
+				status: request.status,
+				statusText: request.statusText,
+				url: request.responseURL,
+				clone: response,
+				text: function () { return Promise.resolve(request.responseText); },
+				json: function () { return Promise.resolve(request.responseText).then(JSON.parse); },
+				blob: function () { return Promise.resolve(new Blob([request.response])); },
+				headers: {
+					keys: function () { return keys; },
+					entries: function () { return all; },
+					get: function (n) { return headers[n.toLowerCase()]; },
+					has: function (n) { return n.toLowerCase() in headers; }
+				}
+			};
+		}
+	});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+//# sourceMappingURL=unfetch.es.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 
@@ -10938,12 +11027,12 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_01ce18af005e042d77da ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01ce18af005e042d77da */ "dll-reference dll_01ce18af005e042d77da"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -11689,12 +11778,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_01ce18af005e042d77da ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01ce18af005e042d77da */ "dll-reference dll_01ce18af005e042d77da"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -17445,7 +17534,7 @@ module.exports = "!function(e){function t(n){if(u[n])return u[n].exports;var r=u
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.1
+/** @license React v16.8.4
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17695,12 +17784,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_2a19476def445b94e0e9 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_01ce18af005e042d77da ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_2a19476def445b94e0e9 */ "dll-reference dll_2a19476def445b94e0e9"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01ce18af005e042d77da */ "dll-reference dll_01ce18af005e042d77da"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -18502,75 +18591,6 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ "./node_modules/unfetch/dist/unfetch.es.js":
-/*!*************************************************!*\
-  !*** ./node_modules/unfetch/dist/unfetch.es.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var index = typeof fetch=='function' ? fetch.bind() : function(url, options) {
-	options = options || {};
-	return new Promise( function (resolve, reject) {
-		var request = new XMLHttpRequest();
-
-		request.open(options.method || 'get', url);
-
-		for (var i in options.headers) {
-			request.setRequestHeader(i, options.headers[i]);
-		}
-
-		request.withCredentials = options.credentials=='include';
-
-		request.onload = function () {
-			resolve(response());
-		};
-
-		request.onerror = reject;
-
-		request.send(options.body);
-
-		function response() {
-			var keys = [],
-				all = [],
-				headers = {},
-				header;
-
-			request.getAllResponseHeaders().replace(/^(.*?):\s*([\s\S]*?)$/gm, function (m, key, value) {
-				keys.push(key = key.toLowerCase());
-				all.push([key, value]);
-				header = headers[key];
-				headers[key] = header ? (header + "," + value) : value;
-			});
-
-			return {
-				ok: (request.status/200|0) == 1,		// 200-299
-				status: request.status,
-				statusText: request.statusText,
-				url: request.responseURL,
-				clone: response,
-				text: function () { return Promise.resolve(request.responseText); },
-				json: function () { return Promise.resolve(request.responseText).then(JSON.parse); },
-				blob: function () { return Promise.resolve(new Blob([request.response])); },
-				headers: {
-					keys: function () { return keys; },
-					entries: function () { return all; },
-					get: function (n) { return headers[n.toLowerCase()]; },
-					has: function (n) { return n.toLowerCase() in headers; }
-				}
-			};
-		}
-	});
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (index);
-//# sourceMappingURL=unfetch.es.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/url/url.js":
 /*!*********************************!*\
   !*** ./node_modules/url/url.js ***!
@@ -19355,14 +19375,14 @@ module.exports = __webpack_require__(/*! /Users/celinebourillot/Projects/celineb
 
 /***/ }),
 
-/***/ "dll-reference dll_2a19476def445b94e0e9":
+/***/ "dll-reference dll_01ce18af005e042d77da":
 /*!*******************************************!*\
-  !*** external "dll_2a19476def445b94e0e9" ***!
+  !*** external "dll_01ce18af005e042d77da" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_2a19476def445b94e0e9;
+module.exports = dll_01ce18af005e042d77da;
 
 /***/ })
 

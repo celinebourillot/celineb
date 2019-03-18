@@ -1,5 +1,9 @@
 .content_block {
 
+  @include mq($until: tb) {
+    padding: 1.5rem;
+  }
+
   padding-top: $baseline*2;
 
   &:last-of-type {

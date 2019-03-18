@@ -1,18 +1,31 @@
 .hero {
   background: $gradient;
   color: $white;
+
   .is-fullheight {
     min-height: 100vh;
   }
 
-  &-body {
-    padding-left: 9rem;
-  }
+
+    &-body {
+
+      padding: 6rem 3rem;
+      @include mq($from: tb) {
+        padding: 3rem 1.5rem 3rem 9rem;
+      }
+    }
 
   .intro {
     font-size: $normal-text;
-    max-width: 70%;
     margin:$baseline 0;
+
+    @include mq($until: tb) {
+      padding: 1.5rem;
+    }
+
+    @include mq($from: tb) {
+      max-width: 70%;
+    }
   }
 
   &_default {

@@ -2,6 +2,10 @@
   h3 {
     text-align: center;
   }
+
+  @include mq($until: tb) {
+    padding: 1.5rem;
+  }
 }
 
 .testimonials {

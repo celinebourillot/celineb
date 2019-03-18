@@ -1,0 +1,11 @@
+.related_content_block {
+
+  @include mq($until: tb) {
+    padding: 1.5rem;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: $baseline*2;
+  }
+}

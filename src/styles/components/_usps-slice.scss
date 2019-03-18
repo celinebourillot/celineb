@@ -2,6 +2,10 @@
 
   background: $light;
 
+  @include mq($until: tb) {
+    padding: 1.5rem;
+  }
+
   .usp {
     height: 100%;
   }

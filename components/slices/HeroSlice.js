@@ -62,7 +62,7 @@ export default function HeroSlice(props) {
             }
           </div>
       </section>
-      <section>
+      <section className="company-block-container">
       <div className="container">
         <div className="company-block">
           <div className="columns">

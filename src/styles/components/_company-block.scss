@@ -1,9 +1,19 @@
+.company-block-container {
+  @include mq($until: dss) {
+    padding: 3rem;
+  }
+}
+
 .company-block {
   border-radius: 4px;
   background: $white;
   padding:$baseline*2;
   box-shadow: $shadow;
-  margin: -$baseline*4 0 0;
+  margin: -100px 0 0;
+
+  @include mq($from: dss) {
+    margin: -$baseline*4 0 0;
+  }
 
   img {
     border-radius: 300px;

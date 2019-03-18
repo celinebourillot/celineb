@@ -46,6 +46,6 @@
         "raw-loader": "^0.5.1",
         "react-dom": "^16.8.0",
         "sass-loader": "^6.0.6",
-        "webpack": "^3.10.0"
+        "webpack": "^4.0.0"
     }
 }

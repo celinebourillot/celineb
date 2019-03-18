@@ -3,6 +3,10 @@
   background: $rainbow-gradient;
   text-align: center;
 
+  @include mq($until: tb) {
+    padding: 1.5rem;
+  }
+
   h3 {
     color: $white;
     font-size: $medium-text;
