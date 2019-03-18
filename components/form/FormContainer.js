@@ -88,7 +88,6 @@ class FormContainer extends Component {
           res.status === 201 ? this.setState({ isSending: false,
           submitSuccess: true }) : this.setState({ isSending: false,
           submitFailure: true })
-          console.log(res.status)
           fetch(`https://app.cosmosdigital.co.uk/tipi/wp-json/gf/v2/entries/${res.data.id}/notifications`, {
               method: 'POST',
               headers: {
