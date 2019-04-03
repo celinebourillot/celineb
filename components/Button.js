@@ -13,7 +13,7 @@ export default function Button(props) {
     } = props;
 
 
-    if (label && link && post_type !== "page" ) return (
+    if (label && link && post_type !== "page" && type !== "External" ) return (
         <Link href={link} as={`/${post_type}/${slug}`}>
             <button className={`button ${customClass}`} target={type === "External" ? "_blank" : ""}>
                 {label}
