@@ -6,9 +6,9 @@ import MobileMenu from './MobileMenu.js';
 import Button from './Button.js';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faLinkedin, faInstagram, faDribbble } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faGithub, faTwitter, faLinkedin, faInstagram)
+library.add(faGithub, faTwitter, faLinkedin, faInstagram, faDribbble)
 
 class Menu extends Component {
   constructor() {
@@ -77,6 +77,16 @@ class Menu extends Component {
                     <a href={this.props.linkedin} target="_blank">
                       <span className="icon">
                         <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                      </span>
+                    </a>
+                  </div>
+                }
+ 
+                {this.props.linkedin &&
+                  <div className="navbar-item">
+                    <a href={this.props.linkedin} target="_blank">
+                      <span className="icon">
+                        <FontAwesomeIcon icon={['fab', 'dribbble']} />
                       </span>
                     </a>
                   </div>
