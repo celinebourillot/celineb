@@ -26,6 +26,7 @@ class Layout extends Component {
               github={this.props.options.facebook}
               instagram={this.props.options.instagram}
               linkedin={this.props.options.linkedin}
+              dribbble={this.props.options.dribble}
               cta={this.props.options.header_call_to_action}
               pageSlug={this.props.pageSlug}/>
 

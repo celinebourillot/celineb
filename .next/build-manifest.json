@@ -11,14 +11,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/page": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/post": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/blog": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

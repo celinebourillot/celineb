@@ -82,9 +82,9 @@ class Menu extends Component {
                   </div>
                 }
  
-                {this.props.linkedin &&
+                {this.props.dribbble &&
                   <div className="navbar-item">
-                    <a href={this.props.linkedin} target="_blank">
+                    <a href={this.props.dribbble} target="_blank">
                       <span className="icon">
                         <FontAwesomeIcon icon={['fab', 'dribbble']} />
                       </span>
