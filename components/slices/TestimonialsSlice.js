@@ -14,32 +14,9 @@ export default function TestimonialsSlice(props) {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: false,
-		responsive: [
-			{
-				breakpoint: 1920,
-				settings: {
-					slidesToShow: 2,
-					infinite: false
-				}
-			},
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					infinite: false,
-					dots: false
-				}
-			}
-		]
+		arrows: false
 	};
 
 	return (
@@ -55,10 +32,10 @@ export default function TestimonialsSlice(props) {
 								<Slider {...settings}>
 									{
 										testimonials.map((testimonial, index) => (
-											<div className="testimonial" key="index">
+											<div className="testimonial" key={index}>
 
 											  <article className="media">
-												{ testimonial.acf.image &&
+												{ testimonial.acf.image.sizes.square_thumb &&
 													<div className="media-left">
 													 <figure className="image is-64x64">
 														 <img src={testimonial.acf.image.sizes.square_thumb} alt="Image"/>

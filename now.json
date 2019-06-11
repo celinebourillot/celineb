@@ -10,7 +10,9 @@
     {"src": "/sitemap.xml", "dest": "/sitemap.xml"},
     {"src": "/post/(?<slug>[^/]+)$", "dest": "/post?slug=$slug"},
     {"src": "/project/(?<slug>[^/]+)$", "dest": "/project?slug=$slug"},
-    {"src": "/(?<slug>[^/]+)$", "dest": "/page?slug=$slug"}
+    {"src": "/(?<slug>[^/]+)$", "dest": "/page?slug=$slug"},
+    {"src": "/blog", "dest": "/blog"},
+    {"src": "/projects", "dest": "/projects"}
   ]
 
 }
