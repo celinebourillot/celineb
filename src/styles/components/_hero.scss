@@ -1,9 +1,32 @@
 .hero {
-  background: $gradient;
-  color: $white;
+  background: transparent;
+  color: $primary;
 
   .is-fullheight {
     min-height: 100vh;
+  }
+
+  .img-left {
+    width: 8rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include mq($from: dsl) {
+      width: 13rem;
+    }
+  }
+
+  .img-right {
+    width: 20rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    @include mq($from: dsl) {
+      width: 30rem;
+    }
   }
 
 
@@ -14,13 +37,29 @@
         padding: 3rem 1.5rem 3rem 9rem;
       }
     }
+  
+    .container {
+
+      @include mq($from: tb) {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        border-radius: 100%;
+        @include mq($from: tb) {
+          height: 15rem;
+          margin-right: 2rem;
+        }
+      }
+    }
 
   .intro {
     font-size: $normal-text;
     margin:$baseline 0;
 
     @include mq($until: tb) {
-      padding: 1.5rem;
+      padding: 0;
     }
 
     @include mq($from: tb) {
@@ -29,7 +68,7 @@
   }
 
   &_default {
-    background: $rainbow-gradient;
+    background: $theme-light;
     color: $white;
     text-align: center;
     padding: $baseline*6 0 $baseline*2;

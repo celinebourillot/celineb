@@ -1,6 +1,6 @@
 .card {
   border: none;
-  box-shadow:$shadow;
+  box-shadow: none;
   transition: all 0.4s ease-in;
   border-radius: 4px;
   height: 100%;
@@ -11,9 +11,5 @@
 
   .card-content {
     padding: $baseline*2;
-  }
-
-  &:hover {
-    background: $light;
   }
 }

@@ -30,9 +30,13 @@ h4 {
 }
 
 .section {
-  padding:$baseline*3 0;
+  padding:6rem 0;
 }
 
 .svg-inline--fa {
   height:1.5em;
+}
+
+.footer {
+  background: $theme-light;
 }

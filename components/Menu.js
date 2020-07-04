@@ -136,7 +136,16 @@ class Menu extends Component {
         </div>
       </nav>
 
-      <MobileMenu menuItems={this.props.menu.items} button={this.props.cta}/>
+      <MobileMenu 
+        menuItems={this.props.menu.items} 
+        twitter = {this.props.twitter}
+        github = {this.props.github}
+        dribbble = {this.props.dribbble}
+        linkedin = {this.props.linkedin}
+        instagram = {this.props.instagram}
+        button={this.props.cta}
+      
+      />
 
       </React.Fragment>
 

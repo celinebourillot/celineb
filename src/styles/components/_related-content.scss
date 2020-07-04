@@ -1,4 +1,5 @@
 .related_content_block {
+  background: $theme-light;
 
   @include mq($until: tb) {
     padding: 1.5rem;

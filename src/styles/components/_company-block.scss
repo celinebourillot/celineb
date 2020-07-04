@@ -1,6 +1,12 @@
 .company-block-container {
-  @include mq($until: dss) {
-    padding: 3rem;
+  background: $theme-light;
+
+  .container {
+    max-width: 50rem;
+    margin: 0 auto;
+    @include mq($until: dss) {
+      padding: 2rem;
+    }
   }
 }
 
@@ -16,8 +22,8 @@
   }
 
   img {
-    border-radius: 300px;
-    max-width:150px;
+    border-radius: 4px;
+    padding: 1rem;
     display: block;
     margin: 0 auto;
   }

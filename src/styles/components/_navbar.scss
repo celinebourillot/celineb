@@ -4,7 +4,7 @@
   background: transparent;
 
   .navbar-item {
-    color: $white;
+    color: $primary;
     font-weight: bold;
 
     &:hover {
@@ -77,10 +77,27 @@
     font-size: $small-text;
     font-weight: 600;
     transition: all 0.4 ease-in;
-    text-align: right;
+    padding-left: 1.5rem;
   }
 
   a:hover {
     color: $primary;
+  }
+
+  .social-media {
+    margin-top: 2rem;
+
+    .navbar-item {
+      display: inline;
+      padding: 0;
+
+      span {
+        color: $cta-colour;
+      }
+  
+      .svg-inline--fa {
+        width: 1.5em;
+      }
+    }
   }
 }
