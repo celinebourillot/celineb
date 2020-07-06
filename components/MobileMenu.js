@@ -74,6 +74,7 @@ class MobileMenu extends Component {
           as={`/${slug}`}
           href={`/${actualPage}?slug=${slug}`}
           key={item.ID}
+          prefetch={false}
         >
           <a onClick={() => this.hideMenu()} className="navbar-item">
             {item.title}

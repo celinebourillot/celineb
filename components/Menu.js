@@ -36,6 +36,7 @@ class Menu extends Component {
               as={`/${slug}`}
               href={`/${actualPage}?slug=${slug}`}
               key={item.ID}
+              prefetch={false}
           >
               <a className="navbar-item">{item.title}</a>
           </Link>

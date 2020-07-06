@@ -1,5 +1,6 @@
 .company-block-container {
   background: $theme-light;
+  padding: 4rem 0 0;
 
   .container {
     max-width: 50rem;
@@ -15,11 +16,6 @@
   background: $white;
   padding:$baseline*2;
   box-shadow: $shadow;
-  margin: -100px 0 0;
-
-  @include mq($from: dss) {
-    margin: -$baseline*4 0 0;
-  }
 
   img {
     border-radius: 4px;

@@ -30,11 +30,9 @@ export default function Button(props) {
     )
 
     if (label && link && type === "External") return (
-        <Link href={link}>
-            <a className={`button ${customClass}`} target="_blank">
-                {label}
-            </a>
-        </Link>
+        <a href={link} className={`button ${customClass}`} target="_blank">
+            {label}
+        </a>
     )
 
     return '';

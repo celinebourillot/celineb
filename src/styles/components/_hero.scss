@@ -69,12 +69,16 @@
 
   &_default {
     background: $theme-light;
-    color: $white;
+    color: $primary;
     text-align: center;
-    padding: $baseline*6 0 $baseline*2;
+    padding: $baseline*6 $baseline*2 $baseline*2;
 
     h1 {
       font-size: $medium-text;
+    }
+
+    .container {
+      display: block;
     }
 
     .intro {
